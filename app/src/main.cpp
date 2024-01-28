@@ -16,10 +16,8 @@ public:
 	void Render() override
 	{
 		ImGui::Begin("Magma App Template");
-    if(mg::renderer->GetAPI() == mg::RenderAPI::Vulkan)
-      ImGui::Text("Render API: Vulkan");
-    else
-      ImGui::Text("Render API: OpenGL");
+    		if(mg::renderer->GetAPI() == mg::RenderAPI::Vulkan) ImGui::Text("Render API: Vulkan");
+		else ImGui::Text("Render API: OpenGL");
 		ImGui::End();
 	}
 };
