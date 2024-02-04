@@ -1,3 +1,4 @@
+#define MAGMA_ENTRYPOINT
 #include "Magma/Magma.h"
 
 class MyApplication:public mg::Application
@@ -5,10 +6,15 @@ class MyApplication:public mg::Application
 public:
 	MyApplication()
 	{
-		window_width = 800;
-		window_height = 600;
-		window_title = "Magma Application";
+
 	}
+
+	void Init() override
+	{
+		SetSize(800,600);
+		SetTitle("Magma Application");
+	}
+
 	~MyApplication()
 	{
 
