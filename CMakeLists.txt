@@ -2,9 +2,14 @@ cmake_minimum_required(VERSION 3.3)
 project(MagmaApp)
 
 
-add_compile_definitions(MAGMA_VULKAN_ENABLED)
-#add_compile_definitions(MAGMA_OPENGL_ENABLED) 
-#set(MAGMA_EMSCRIPTEN ON)
+set(MAGMA_VULKAN ON)
+set(MAGMA_OPENGL OFF)
+set(MAGMA_EMSCRIPTEN OFF)
+
+
+#add_compile_definitions(MAGMA_NO_LOGGING) #uncomment to stop all logging
+#add_compile_definitions(MAGMA_NO_CORE_LOGGING) #uncomment to stop core logging
+#add_compile_definitions(MAGMA_NO_CLIENT_LOGGING) #uncomment to stop client logging
 
 
 add_subdirectory(vendor/Magma)
