@@ -9,6 +9,8 @@
 
 out/
 build/
+.vs/
+.vscode/
 
 # Ignore cmake build directory
 CMakeFiles/
